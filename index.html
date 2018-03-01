@@ -260,6 +260,144 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/Async-in-Node/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Howard Wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/01/Async-in-Node/" itemprop="url">Async in Node</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-01T16:22:50+08:00">2018-03-01</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">它的优秀之处并非原创，它的原创之处并不优秀。</span><br><span class="line">								——— Brendan Eich</span><br></pre></td></tr></table></figure>
+<h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="异步-同步-amp-阻塞-非阻塞"><a href="#异步-同步-amp-阻塞-非阻塞" class="headerlink" title="异步/同步  &amp;  阻塞/非阻塞"></a>异步/同步  &amp;  阻塞/非阻塞</h2><h3 id="阻塞-非阻塞"><a href="#阻塞-非阻塞" class="headerlink" title="阻塞/非阻塞"></a>阻塞/非阻塞</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">操作系统处理IO的两种方式： 阻塞/非阻塞</span><br><span class="line"></span><br><span class="line">阻塞IO： 操作系统等待IO处理完成才返回结果</span><br><span class="line"></span><br><span class="line">非阻塞IO： 调用IO后立即返回－轮询IO是否完成</span><br></pre></td></tr></table></figure>
+<h3 id="轮询方式"><a href="#轮询方式" class="headerlink" title="轮询方式"></a>轮询方式</h3><ul>
+<li>read            重复调用，反复轮询</li>
+<li>select          通过判断句柄上的状态</li>
+<li>poll              性能改善select</li>
+<li>epoll            主流，epoll请求后等待休眠，回调唤醒进行一个read</li>
+</ul>
+<h3 id="异步-同步"><a href="#异步-同步" class="headerlink" title="异步/同步"></a>异步/同步</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">epoll休眠期间，CPU是闲置的</span><br><span class="line">nodejs主线程为单线程，使用其他线程作为IO线程</span><br><span class="line">IO线程完成任务后，通过线程间通信将数据返回</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-------------------------------</span><br><span class="line">			 Nodejs</span><br><span class="line">-------------------------------</span><br><span class="line">             libuv</span><br><span class="line">-------------------------------</span><br><span class="line">*nix(自定义实现) | windows(IOCP)</span><br><span class="line">-------------------------------</span><br></pre></td></tr></table></figure>
+<h1 id="异步API"><a href="#异步API" class="headerlink" title="异步API"></a>异步API</h1><ul>
+<li>setTimeout</li>
+<li>process.nextTick</li>
+<li>process.setImmediate</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/Koa-Source-Code/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -737,7 +875,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

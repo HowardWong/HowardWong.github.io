@@ -103,23 +103,23 @@
   <meta name="keywords" content="Hexo, NexT" />
 
 
-<meta name="description" content="basic objects are pass by reference, Basic types are pass by value  If reference was no longer referenced, it would be collected by the GC of V8.  If a value variable was inside a closure, it wouldn’t">
+<meta name="description" content="12它的优秀之处并非原创，它的原创之处并不优秀。								——— Brendan Eich 基础异步/同步  &amp;amp;  阻塞/非阻塞阻塞/非阻塞12345操作系统处理IO的两种方式： 阻塞/非阻塞阻塞IO： 操作系统等待IO处理完成才返回结果非阻塞IO： 调用IO后立即返回－轮询IO是否完成 轮询方式 read            重复调用，反复轮询 select          通">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node Basic">
-<meta property="og:url" content="http://yoursite.com/2018/02/28/Node/index.html">
+<meta property="og:title" content="Async in Node">
+<meta property="og:url" content="http://yoursite.com/2018/03/01/Async-in-Node/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="basic objects are pass by reference, Basic types are pass by value  If reference was no longer referenced, it would be collected by the GC of V8.  If a value variable was inside a closure, it wouldn’t">
-<meta property="og:updated_time" content="2018-02-28T15:39:44.000Z">
+<meta property="og:description" content="12它的优秀之处并非原创，它的原创之处并不优秀。								——— Brendan Eich 基础异步/同步  &amp;amp;  阻塞/非阻塞阻塞/非阻塞12345操作系统处理IO的两种方式： 阻塞/非阻塞阻塞IO： 操作系统等待IO处理完成才返回结果非阻塞IO： 调用IO后立即返回－轮询IO是否完成 轮询方式 read            重复调用，反复轮询 select          通">
+<meta property="og:updated_time" content="2018-03-01T08:53:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node Basic">
-<meta name="twitter:description" content="basic objects are pass by reference, Basic types are pass by value  If reference was no longer referenced, it would be collected by the GC of V8.  If a value variable was inside a closure, it wouldn’t">
+<meta name="twitter:title" content="Async in Node">
+<meta name="twitter:description" content="12它的优秀之处并非原创，它的原创之处并不优秀。								——— Brendan Eich 基础异步/同步  &amp;amp;  阻塞/非阻塞阻塞/非阻塞12345操作系统处理IO的两种方式： 阻塞/非阻塞阻塞IO： 操作系统等待IO处理完成才返回结果非阻塞IO： 调用IO后立即返回－轮询IO是否完成 轮询方式 read            重复调用，反复轮询 select          通">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/28/Node/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/01/Async-in-Node/"/>
 
 
 
@@ -128,7 +128,7 @@
     sidebar: "",
   };
 </script>
-  <title>Node Basic | Blog</title>
+  <title>Async in Node | Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/28/Node/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/Async-in-Node/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Howard Wong">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Node Basic</h1>
+          <h1 class="post-title" itemprop="name headline">Async in Node</h1>
         
 
         <div class="post-meta">
@@ -292,7 +292,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-28T21:36:05+08:00">2018-02-28</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-01T16:22:50+08:00">2018-03-01</time>
             
 
             
@@ -329,30 +329,20 @@
       
 
       
-        <h1 id="basic"><a href="#basic" class="headerlink" title="basic"></a>basic</h1><ul>
-<li><p>objects are pass by reference, Basic types are pass by value</p>
-</li>
-<li><p>If reference was no longer referenced, it would be collected by the GC of V8.</p>
-</li>
-<li><p>If a value variable was inside a closure, it wouldn’t be release until the closure was no longer referenced.</p>
-</li>
-<li><p>In non-closure scope, it will be collected when V8 is switched to new space.</p>
-</li>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">它的优秀之处并非原创，它的原创之处并不优秀。</span><br><span class="line">								——— Brendan Eich</span><br></pre></td></tr></table></figure>
+<h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="异步-同步-amp-阻塞-非阻塞"><a href="#异步-同步-amp-阻塞-非阻塞" class="headerlink" title="异步/同步  &amp;  阻塞/非阻塞"></a>异步/同步  &amp;  阻塞/非阻塞</h2><h3 id="阻塞-非阻塞"><a href="#阻塞-非阻塞" class="headerlink" title="阻塞/非阻塞"></a>阻塞/非阻塞</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">操作系统处理IO的两种方式： 阻塞/非阻塞</span><br><span class="line"></span><br><span class="line">阻塞IO： 操作系统等待IO处理完成才返回结果</span><br><span class="line"></span><br><span class="line">非阻塞IO： 调用IO后立即返回－轮询IO是否完成</span><br></pre></td></tr></table></figure>
+<h3 id="轮询方式"><a href="#轮询方式" class="headerlink" title="轮询方式"></a>轮询方式</h3><ul>
+<li>read            重复调用，反复轮询</li>
+<li>select          通过判断句柄上的状态</li>
+<li>poll              性能改善select</li>
+<li>epoll            主流，epoll请求后等待休眠，回调唤醒进行一个read</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// memory leak analysis</span><br><span class="line">https://zhuanlan.zhihu.com/p/25736931</span><br></pre></td></tr></table></figure>
-<h2 id="Q"><a href="#Q" class="headerlink" title="Q"></a>Q</h2><ul>
-<li>0.1 + 0.2 === 0.3? Why?</li>
-</ul>
-<h1 id="module"><a href="#module" class="headerlink" title="module"></a>module</h1><ul>
-<li><p>clean <code>require.cache</code> to hot reload js module</p>
-</li>
-<li><p>nodejs wrap module</p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// b.js</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">exports, require, module, __filename, __dirname</span>) </span>&#123;</span><br><span class="line">  t = <span class="number">111</span>;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">// a.js</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">exports, require, module, __filename, __dirname</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(t); <span class="comment">// 111</span></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// x-y problem</span><br><span class="line">https://coolshell.cn/articles/10804.html</span><br></pre></td></tr></table></figure>
-<h2 id="Q-1"><a href="#Q-1" class="headerlink" title="Q"></a>Q</h2><ul>
-<li>will a.js &amp; b.js require each other cause to crash?</li>
+<h3 id="异步-同步"><a href="#异步-同步" class="headerlink" title="异步/同步"></a>异步/同步</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">epoll休眠期间，CPU是闲置的</span><br><span class="line">nodejs主线程为单线程，使用其他线程作为IO线程</span><br><span class="line">IO线程完成任务后，通过线程间通信将数据返回</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-------------------------------</span><br><span class="line">			 Nodejs</span><br><span class="line">-------------------------------</span><br><span class="line">             libuv</span><br><span class="line">-------------------------------</span><br><span class="line">*nix(自定义实现) | windows(IOCP)</span><br><span class="line">-------------------------------</span><br></pre></td></tr></table></figure>
+<h1 id="异步API"><a href="#异步API" class="headerlink" title="异步API"></a>异步API</h1><ul>
+<li>setTimeout</li>
+<li>process.nextTick</li>
+<li>process.setImmediate</li>
 </ul>
 
       
@@ -381,8 +371,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/27/Front-end-Basic/" rel="next" title="Front-end Basic">
-                <i class="fa fa-chevron-left"></i> Front-end Basic
+              <a href="/2018/03/01/Koa-Source-Code/" rel="next" title="Koa Source Code">
+                <i class="fa fa-chevron-left"></i> Koa Source Code
               </a>
             
           </div>
@@ -390,10 +380,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/01/Koa-Source-Code/" rel="prev" title="Koa Source Code">
-                Koa Source Code <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -507,7 +493,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#basic"><span class="nav-number">1.</span> <span class="nav-text">basic</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Q"><span class="nav-number">1.1.</span> <span class="nav-text">Q</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#module"><span class="nav-number">2.</span> <span class="nav-text">module</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Q-1"><span class="nav-number">2.1.</span> <span class="nav-text">Q</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#异步-同步-amp-阻塞-非阻塞"><span class="nav-number">1.1.</span> <span class="nav-text">异步/同步  &amp;  阻塞/非阻塞</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞-非阻塞"><span class="nav-number">1.1.1.</span> <span class="nav-text">阻塞/非阻塞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#轮询方式"><span class="nav-number">1.1.2.</span> <span class="nav-text">轮询方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步-同步"><span class="nav-number">1.1.3.</span> <span class="nav-text">异步/同步</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步API"><span class="nav-number">2.</span> <span class="nav-text">异步API</span></a></li></ol></div>
             
 
           </div>
