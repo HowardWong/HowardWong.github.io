@@ -260,6 +260,159 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/06/SVG-note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Howard Wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/06/SVG-note/" itemprop="url">SVG note</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-06T10:24:56+08:00">2018-03-06</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="SVG-in-HTML"><a href="#SVG-in-HTML" class="headerlink" title="SVG in HTML"></a>SVG in HTML</h1><h2 id="矩形"><a href="#矩形" class="headerlink" title="矩形"></a>矩形</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">rect</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"100"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">style</span>=<span class="string">"fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="props"><a href="#props" class="headerlink" title="props"></a>props</h3><ul>
+<li>width, height</li>
+</ul>
+<h3 id="style"><a href="#style" class="headerlink" title="style"></a>style</h3><ul>
+<li>fill, fill-opacity</li>
+<li>stroke, stroke-width, stroke-opacity</li>
+<li>圆角 rx, ry</li>
+</ul>
+<h2 id="圆形"><a href="#圆形" class="headerlink" title="圆形"></a>圆形</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">"100"</span> <span class="attr">cy</span>=<span class="string">"50"</span> <span class="attr">r</span>=<span class="string">"40"</span> <span class="attr">stroke</span>=<span class="string">"black"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">stroke-width</span>=<span class="string">"2"</span> <span class="attr">fill</span>=<span class="string">"red"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="props-1"><a href="#props-1" class="headerlink" title="props"></a>props</h3><ul>
+<li>圆点坐标 cx, cy</li>
+<li>半径 r</li>
+</ul>
+<h2 id="椭圆"><a href="#椭圆" class="headerlink" title="椭圆"></a>椭圆</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">"300"</span> <span class="attr">cy</span>=<span class="string">"80"</span> <span class="attr">rx</span>=<span class="string">"100"</span> <span class="attr">ry</span>=<span class="string">"50"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">style</span>=<span class="string">"fill:yellow;stroke:purple;stroke-width:2"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="props-2"><a href="#props-2" class="headerlink" title="props"></a>props</h3><ul>
+<li>椭圆中心 cx, cy</li>
+<li>水平/垂直半径 rx, ry</li>
+</ul>
+<h2 id="直线"><a href="#直线" class="headerlink" title="直线"></a>直线</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">"0"</span> <span class="attr">y1</span>=<span class="string">"0"</span> <span class="attr">x2</span>=<span class="string">"200"</span> <span class="attr">y2</span>=<span class="string">"200"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">style</span>=<span class="string">"stroke:rgb(255,0,0);stroke-width:2"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="props-3"><a href="#props-3" class="headerlink" title="props"></a>props</h3><ul>
+<li>x1, y1, x2, y2</li>
+</ul>
+<h2 id="多边形"><a href="#多边形" class="headerlink" title="多边形"></a>多边形</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">polygon</span> <span class="attr">points</span>=<span class="string">"200,10 250,190 160,210"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">style</span>=<span class="string">"fill:lime;stroke:purple;stroke-width:1"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="曲线"><a href="#曲线" class="headerlink" title="曲线"></a>曲线</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">polyline</span> <span class="attr">points</span>=<span class="string">"20,20 40,25 60,40 80,120 120,140 200,180"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">style</span>=<span class="string">"fill:none;stroke:black;stroke-width:3"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">M = moveto</span><br><span class="line">L = lineto</span><br><span class="line">H = horizontal lineto</span><br><span class="line">V = vertical lineto</span><br><span class="line">C = curveto</span><br><span class="line">S = smooth curveto</span><br><span class="line">Q = quadratic Bézier curve</span><br><span class="line">T = smooth quadratic Bézier curveto</span><br><span class="line">A = elliptical Arc</span><br><span class="line">Z = closepath</span><br></pre></td></tr></table></figure>
+<h3 id="闭合路径"><a href="#闭合路径" class="headerlink" title="闭合路径"></a>闭合路径</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M150 0 L75 200 L225 200 Z"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="曲线-1"><a href="#曲线-1" class="headerlink" title="曲线"></a>曲线</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M 100 350"</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Animate"><a href="#Animate" class="headerlink" title="Animate"></a>Animate</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">width</span>=<span class="string">"300px"</span> <span class="attr">height</span>=<span class="string">"100px"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">"0"</span> <span class="attr">y</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"100"</span> <span class="attr">stroke</span>=<span class="string">"black"</span> <span class="attr">stroke-width</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">"0"</span> <span class="attr">cy</span>=<span class="string">"50"</span> <span class="attr">r</span>=<span class="string">"15"</span> <span class="attr">fill</span>=<span class="string">"blue"</span> <span class="attr">stroke</span>=<span class="string">"black"</span> <span class="attr">stroke-width</span>=<span class="string">"1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">animate</span> <span class="attr">attributeName</span>=<span class="string">"cx"</span> <span class="attr">from</span>=<span class="string">"0"</span> <span class="attr">to</span>=<span class="string">"100"</span> <span class="attr">dur</span>=<span class="string">"5s"</span> <span class="attr">repeatCount</span>=<span class="string">"indefinite"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">circle</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="AnimateMotion"><a href="#AnimateMotion" class="headerlink" title="AnimateMotion"></a>AnimateMotion</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">"0"</span> <span class="attr">y</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"100"</span> <span class="attr">stroke</span>=<span class="string">"black"</span> <span class="attr">stroke-width</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">"0"</span> <span class="attr">cy</span>=<span class="string">"50"</span> <span class="attr">r</span>=<span class="string">"15"</span> <span class="attr">fill</span>=<span class="string">"blue"</span> <span class="attr">stroke</span>=<span class="string">"black"</span> <span class="attr">stroke-width</span>=<span class="string">"1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">animateMotion</span> <span class="attr">path</span>=<span class="string">"M 0 0 H 300 Z"</span> <span class="attr">dur</span>=<span class="string">"3s"</span> <span class="attr">repeatCount</span>=<span class="string">"indefinite"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">circle</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/Async-in-Node/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -875,7 +1028,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
