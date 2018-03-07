@@ -1,7 +1,9 @@
 title: SVG note
 author: Howard Wong
-date: 2018-03-06 10:24:56
 tags:
+  - HTML
+categories: []
+date: 2017-03-06 10:24:00
 ---
 # SVG in HTML
 
