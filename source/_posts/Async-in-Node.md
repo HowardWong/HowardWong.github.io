@@ -42,7 +42,110 @@ IO线程完成任务后，通过线程间通信将数据返回
 -------------------------------
 ```
 
-# 异步API
-- setTimeout
-- process.nextTick
-- process.setImmediate
+# Event Loop
+
+## Browser
+
+原文：https://zhuanlan.zhihu.com/p/33087629
+
+![upload successful](/images/pasted-3.png)
+
+task 包括 setTimeout、setInterval、setImmediate、I/O、UI交互事件
+
+microtask 包括 Promise、process.nextTick、MutaionObserver
+
+1. 执行同步代码
+2. 取出第一个task并执行
+3. 清空micortask队列
+4. 重复 2 3
+
+```javascript
+console.log(1)
+
+setTimeout(() => {
+    console.log(2)
+    new Promise(resolve => {
+        console.log(4)
+        resolve()
+    }).then(() => {
+        console.log(5)
+    })
+})
+
+new Promise(resolve => {
+    console.log(7)
+    resolve()
+}).then(() => {
+    console.log(8)
+})
+
+setTimeout(() => {
+    console.log(9)
+    new Promise(resolve => {
+        console.log(11)
+        resolve()
+    }).then(() => {
+        console.log(12)
+    })
+})
+```
+
+- 输出同步代码 1 7
+- setTimeout 具有时延 task队列为空
+- 清空microtask队列 输出8
+- 取第一个task 2 3
+- 清空microtask队列 5 
+- 取第一个task 9 11
+- 清空microtask队列 12
+
+```javascript
+console.log(1)
+
+setTimeout(() => {
+    console.log(2)
+    new Promise(resolve => {
+        console.log(4)
+        resolve()
+    }).then(() => {
+        console.log(5)
+    })
+    process.nextTick(() => {
+        console.log(3)
+    })
+})
+
+new Promise(resolve => {
+    console.log(7)
+    resolve()
+}).then(() => {
+    console.log(8)
+})
+
+process.nextTick(() => {
+    console.log(6)
+})
+```
+
+- promise.nextTick 优先级高于 Promise
+- 1 7
+- 6 8
+- 2 4
+- 3 5
+
+## Node
+
+![upload successful](/images/pasted-5.png)
+
+
+- expired timers and intervals，即到期的setTimeout/setInterval
+- I/O events，包含文件，网络等等
+- immediates，通过setImmediate注册的函数
+- close handlers，close事件的回调，比如TCP连接断开
+
+
+
+
+
+
+
+
