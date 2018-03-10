@@ -161,3 +161,95 @@ ECMAScript使用原型链做为实现继承的方法，利用原型使一个引�
 - 每个原型对象的constructor都执行构造函数
 - 实例包含一个指向原型对象的内部指针
 
+### 原型链继承
+
+```javascript
+function Parent() {}
+function Child() {}
+Child.prototype = new Parent();
+```
+
+存在的问题：所有实例都共享Child.prototype
+```javascript
+function Parent() {
+  this.array = [];
+}
+function Child() {}
+Child.prototype = new Parent();
+const c1 = new Child();
+c1.array.push(1);
+new Child().array
+```
+
+### 借用构造函数
+```javascript
+function Parent() {}
+function Child() {
+  Parent.call(this);
+}
+```
+
+存在的问题：无法使用Parent.prototype
+
+### 组合继承
+```javascript
+function Parent() {}
+function Child() {
+  Parent.call(this);
+}
+Child.prototype = new Parent();
+```
+
+存在的问题：调用了两次构造函数
+
+### 原型式继承 - Object.create
+```javascript
+const create = proto => {
+  function F() {};
+  F.prototype = proto;
+  return new F();
+}
+```
+
+### 寄生式继承
+```javascript
+function createObj(obj) {
+    var clone = parent(obj);
+    clone.getChild = function(){
+        return this.child;
+    }
+}
+```
+存在的问题：无法复用函数
+
+### 寄生组合式继承 - Object.create + 借用构造函数
+```javascript
+function create(proto) {
+  function F() {};
+  F.prototype = proto;
+  return new F();
+}
+function inherit(child, parent) {
+  child.prototype = create(parent.prototype);
+  child.prototype.constructor = child;
+}
+
+function Parent() {}
+function Child() {
+  Parent.call(this);
+}
+inherit(Child, Parent);
+```
+
+通过借用构造函数模式来继承属性，通过原型链来继承方法
+
+### ES6 class
+```javascript
+class Parent {
+}
+class Child extends Parent {
+  constructor() {
+    super();`
+  }
+}
+```
