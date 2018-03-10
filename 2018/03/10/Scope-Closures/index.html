@@ -103,19 +103,23 @@
   <meta name="keywords" content="Hexo, NexT" />
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Howard Wong&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+<meta name="description" content="Scope传统编译方式 分词 Tokenizing 语法分析 Parsing to AST 代码生成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scope &amp; Closures">
+<meta property="og:url" content="http://yoursite.com/2018/03/10/Scope-Closures/index.html">
 <meta property="og:site_name" content="Howard Wong&#39;s Blog">
+<meta property="og:description" content="Scope传统编译方式 分词 Tokenizing 语法分析 Parsing to AST 代码生成">
+<meta property="og:updated_time" content="2018-03-10T07:58:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Howard Wong&#39;s Blog">
+<meta name="twitter:title" content="Scope &amp; Closures">
+<meta name="twitter:description" content="Scope传统编译方式 分词 Tokenizing 语法分析 Parsing to AST 代码生成">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/10/Scope-Closures/"/>
 
 
 
@@ -124,7 +128,7 @@
     sidebar: "",
   };
 </script>
-  <title>Archive | Howard Wong's Blog</title>
+  <title>Scope & Closures | Howard Wong's Blog</title>
   
 
 
@@ -171,7 +175,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -249,154 +253,157 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/10/Scope-Closures/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Howard Wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Howard Wong's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Scope & Closures</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-10T15:54:35+08:00">2018-03-10</time>
+            
+
+            
+            
+
+            
+          </span>
+
           
-        
-        Um..! 10 posts in total. Keep on posting.
-      </span>
-      
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/28/Node/" itemprop="url">
-              
-                <span itemprop="name">Node Basic</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-28T21:36:00+08:00"
-              content="2017-09-28" >
-          09-28
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/06/SVG-note/" itemprop="url">
-              
-                <span itemprop="name">SVG note</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-06T10:24:00+08:00"
-              content="2017-03-06" >
-          03-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/27/Front-end-Basic/" itemprop="url">
-              
-                <span itemprop="name">Front-end Basic</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-27T20:35:00+08:00"
-              content="2017-02-27" >
-          02-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="Scope"><a href="#Scope" class="headerlink" title="Scope"></a>Scope</h1><h2 id="传统编译方式"><a href="#传统编译方式" class="headerlink" title="传统编译方式"></a>传统编译方式</h2><ol>
+<li>分词 Tokenizing</li>
+<li>语法分析 Parsing to AST</li>
+<li>代码生成</li>
+</ol>
 
       
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/10/Grid/" rel="next" title="Grid Layout">
+                <i class="fa fa-chevron-left"></i> Grid Layout
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -417,8 +424,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -480,6 +496,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Scope"><span class="nav-number">1.</span> <span class="nav-text">Scope</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#传统编译方式"><span class="nav-number">1.1.</span> <span class="nav-text">传统编译方式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -614,6 +646,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.4"></script>
+
+
 
   
 
