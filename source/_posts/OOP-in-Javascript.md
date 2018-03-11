@@ -1,7 +1,8 @@
 title: OOP in Javascript
 author: Howard Wong
-date: 2018-03-08 11:47:34
-tags:
+tags: []
+categories: []
+date: 2018-02-08 11:47:00
 ---
 # Object
 

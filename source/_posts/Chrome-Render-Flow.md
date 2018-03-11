@@ -1,7 +1,8 @@
 title: Chrome Render Performence
 author: Howard Wong
-date: 2018-03-08 15:18:26
-tags:
+tags: []
+categories: []
+date: 2018-02-08 15:18:00
 ---
 
 ![upload successful](/images/pasted-7.png)

@@ -1,4 +1,4 @@
-title: Async in Node
+title: Async
 author: Howard Wong
 date: 2018-03-01 16:22:50
 tags:
