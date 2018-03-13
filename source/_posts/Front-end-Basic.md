@@ -174,6 +174,19 @@ date: 2017-02-27 20:35:00
 }
 ```
 
+## clearfix
+
+```css
+.clearfix {
+	zoom: 1;
+}
+.clearfix:after {
+	content: '';
+    display: table;
+    clear: both;
+}
+```
+
 
 
 -----

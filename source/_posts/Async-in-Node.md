@@ -54,10 +54,9 @@ task 包括 setTimeout、setInterval、setImmediate、I/O、UI交互事件
 
 microtask 包括 Promise、process.nextTick、MutaionObserver
 
-1. 执行同步代码
-2. 取出第一个task并执行
+1. 执行Task
 3. 清空micortask队列
-4. 重复 2 3
+4. 重复 1 2
 
 ```javascript
 console.log(1)
@@ -65,7 +64,7 @@ console.log(1)
 setTimeout(() => {
     console.log(2)
     new Promise(resolve => {
-        console.log(4)
+        console.log(3)
         resolve()
     }).then(() => {
         console.log(5)
@@ -141,11 +140,3 @@ process.nextTick(() => {
 - I/O events，包含文件，网络等等
 - immediates，通过setImmediate注册的函数
 - close handlers，close事件的回调，比如TCP连接断开
-
-
-
-
-
-
-
-
